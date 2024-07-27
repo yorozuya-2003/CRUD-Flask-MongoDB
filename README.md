@@ -1,6 +1,6 @@
-# CRUD-Flask-MongoDB
+# Flask-RESTX-MongoDB-Docker
 ## Overview
-Flask Application for CRUD operations on MongoDB database for a User resource using a REST API.
+Flask Application for CRUD operations on MongoDB database for a User resource using a REST API. Created using Flask-RESTX (with Swagger UI), MongoDB, and Docker.
 
 
 ## Setup
@@ -12,7 +12,7 @@ Make sure you have installed the following on your machine:
 ### Steps
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yorozuya-2003/CRUD-Flask-MongoDB.git
+    git clone https://github.com/yorozuya-2003/Flask-RESTX-MongoDB-Docker.git
     ```
 
 2. Run the Docker container using docker-compose:
