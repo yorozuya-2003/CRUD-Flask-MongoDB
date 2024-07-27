@@ -5,7 +5,7 @@ Flask Application for CRUD operations on MongoDB database for a User resource us
 
 ## Setup
 ### Prerequisites
-Make sure you have installed the following prerequisites on your machine:
+Make sure you have installed the following on your machine:
 - [Git](https://git-scm.com/downloads)
 - [Docker](https://docs.docker.com/engine/install/)
 
@@ -100,30 +100,21 @@ If you want to modify the MongoDB credentials after initializing the database, y
     ```sh
     db.changeUserPassword('old-username', 'new-password')
     ```
-    
-    To create a new user, run the following commands:
+    **OR**  
+
+
+    To add a new user, run the following commands (modify permissions and database names according to requirements):
     ```sh
     use admin
     ```
 
     ```sh
-    db.createUser(
-        {
-            user: "new-username",
-            pwd: "new-password",
-            roles: [
-                {
-                    role: "readWrite",
-                    db: "database-name (users_db)"
-                }
-            ]
-        }
-    );
+    db.createUser({user: "new-username", pwd: "new-password", roles: [{role: "readWrite", db: "database-name (users_db)"}]});
     ```
 3. Exit the MongoDB shell by running the command:
-  ```sh
-  exit
-  ```
+    ```sh
+    exit
+    ```
 
 4. Update the following environment variables in the `.env` file:
   - `MONGO_INITDB_ROOT_USERNAME` = (new-username)
